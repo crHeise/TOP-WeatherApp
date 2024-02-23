@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <script type="js" src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <title>Heise Weather</title>
 </head>
 <body>
@@ -14,13 +14,17 @@
             <p>Enter the city you would like to see the weather for and then hit the button. Easy-peasy.</p>
         </header>        
         <div class="user-location">
-            <form class="location-form" id="weather-form" action="index.html" method="post">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
-                <input type="submit" id="submit-button" name="submit-button" value="Get Weather">
-            </form>
+            <input type="text" id="city-name" placeholder="Enter City Name">
+            <button class="get-weather-button" id="get-weather-button">Get Weather</button>
         </div>
-        <div class="weather-results"></div>
+        <div class="weather-display">
+            <h3 id="city"></h3>
+            <ul class="weather-conditions" id="weather-conditions">
+                <li id="temperature"></li>
+                <li id="feels-like"></li>
+                <li id="conditions"><img id="conditions-gif"></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
