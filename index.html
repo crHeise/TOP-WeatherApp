@@ -9,7 +9,18 @@
 </head>
 <body>
     <div class="main-container">
-        <h1>Chris Heise's Weather Application</h1>
+        <header class="header-info">
+            <h1>Chris Heise's Weather Application</h1>
+            <p>Enter the city you would like to see the weather for and then hit the button. Easy-peasy.</p>
+        </header>        
+        <div class="user-location">
+            <form class="location-form" id="weather-form" action="index.html" method="post">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <input type="submit" id="submit-button" name="submit-button" value="Get Weather">
+            </form>
+        </div>
+        <div class="weather-results"></div>
     </div>
 </body>
 </html>
